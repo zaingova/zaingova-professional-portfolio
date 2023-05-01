@@ -1,0 +1,66 @@
+:root {
+    --defaultText: #cacaca;
+    --defaultBG: #000;
+    --hoverLink: #ffffff;
+    --titleText: #aaca53;
+}
+
+/* hero/background image */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/bg-image.jpg");
+    background-size: cover;
+}
+
+/* semantic elements for navigation bar */
+.navBar {
+    /* setting up flexbox and navbar element alignment */
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 88px 50px;
+}
+
+/* navbar list element styling */
+.navBar ul li {
+    list-style: none;
+    display: inline-block;
+
+    padding: 10px 45px;
+}
+
+/* navbar list link styling elements */
+.navBar ul li a {
+    color: var(--defaultText);
+    font-size: 30px;
+    text-decoration: none;
+    position: relative;
+
+    padding: 5px 10px;
+}
+
+/* navbar list link hover styling */
+.navBar ul li a:hover {
+    color: var(--hoverLink);
+    transition: ease-in-out 0.8s;
+}
+
+/* navbar title styling */
+.navBar ul .title {
+    top: 0px;
+    left: 0px;
+
+    color: var(--titleText);
+    font-size: 120px;
+    justify-content: left;
+    position: absolute;
+    padding: 20px 0 0 30px;
+}
+
+.description h1 {
+    position:absolute;
+    top: 160px;
+    left: 29px;
+    font-size: 20px;
+}
