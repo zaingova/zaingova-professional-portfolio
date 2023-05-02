@@ -5,12 +5,25 @@
     --titleText: #aaca53;
 }
 
+/* main website content panels */
+.content {
+    margin: 10px 200px;
+    display: flex;
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 50px;
+    color: var(--defaultText);
+}
+
 /* hero/background image */
 .hero {
     width: 100%;
     height: 100vh;
     background: url("../images/bg-image.jpg");
     background-size: cover;
+    filter: brightness();
 }
 
 /* semantic elements for navigation bar */
@@ -19,7 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: right;
-    padding: 88px 50px;
+    padding: 90px 50px;
 }
 
 /* navbar list element styling */
@@ -58,9 +71,8 @@
     padding: 20px 0 0 30px;
 }
 
-.description h1 {
-    position:absolute;
-    top: 160px;
-    left: 29px;
-    font-size: 20px;
+.horizontolLine {
+    position: relative;
+    border-top: 6px dotted var(--titleText);
+    top: -70px;
 }
