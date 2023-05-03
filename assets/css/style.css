@@ -1,51 +1,170 @@
 :root {
-    --dark-grey: #242424;
-    --white: #fff;
-    --mustard: #dbc926;
-}
+    --navBar: #aaaaaa;
+    --defaultBG: #5c5c5c;
+    --border: #000000;
 
-html {
-    /* sets 1rem to 10px, pulled from class example */
-    font-size: 62.5%;
+    --hoverLink: #ffffff;
+
+    --bioText: #ffffff;
+    --defaultText: #d4d4d4;
+    --titleText: #b96fa3;
+
+    --panelTitle: #fff;
+    --contentSpacing : #181818;
 }
 
 body {
-    font-size: 1.5rem;
-    color: var(--white);
-    background: var(--dark-grey);
+    background-color: var(--contentSpacing);
 }
 
-h1, h2, h3 {
-    margin-bottom: 0.5rem;
-    color: var(mustard);
-}
-
-h1 {
-    font-size: 3rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1rem;
-}
-
-header {
-    width: 60%;
-    margin: 3rem auto;
-    text-align: center;
+/* main website content panels */
+.content {
+    margin-top: 243px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-header h1.title {
-    font-size: 5rem;
-    padding: 4rem;
+/* styling for the 'about' section at the top of the page. Not to be confused with the actual 'About Me' section later on */
+.contentPanel {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    border-top: 5px solid var(--border);
+    border-bottom: 5px solid var(--border);
+    background-color: var(--defaultBG);
+    color: var(--border);
+
+    font-family: 'PT Serif Caption', serif;
+    font-size: 20px;
+    font-weight: 700;
+
 }
 
-nav a {
-    color: #ffffff;
-    padding: 4rem
-  }
+.contentPanel p {
+    margin: 20px;
+}
+
+.contentPanel a {
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.contentPanel h1 {
+    text-align: center;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 70px;
+
+    color: var(--defaultText);
+
+    margin: 20px;
+}
+
+.contentPanel .firstProject img {
+    float: left;
+    width: 900px;
+    object-fit: fill;
+}
+
+.firstProject h3 {
+    position: absolute;
+    font-size: 30px;
+    text-align: left;
+    background-color: white;
+}
+
+.bio {
+    font-family: 'Shantell Sans', cursive;
+    font-size: 31px;
+
+    color: var(--bioText);
+    text-align: center;
+    margin: 170px;
+}
+
+/* hero/background image */
+.hero {
+    width: 100%;
+    height: 700px;
+    background: url("../images/bg-image.jpg");
+    background-size: cover;
+    flex-wrap: wrap;
+    border-bottom: 10px solid var(--contentSpacing);
+}
+
+/* semantic elements for navigation bar */
+.navBar {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: right;
+    top: 40px;
+    padding: 100px 50px;
+}
+
+.navBar ul {
+    padding-top: 10px;
+}
+
+/* navbar list element styling */
+.navBar ul li {
+    font-family: 'Nanum Pen Script', cursive;
+    list-style: none;
+    display: inline-block;
+}
+
+/* navbar list link styling elements */
+.navBar ul li a {
+    color: var(--navBar);
+    font-size: 40px;
+    text-decoration: none;
+    position: relative;
+
+    padding: 5px 50px;
+}
+
+/* navbar list link hover styling */
+.navBar ul li a:hover {
+    color: var(--hoverLink);
+    transition: ease-in-out 0.8s;
+}
+
+/* navbar title styling */
+.title h1 {
+    font-family: 'Homemade Apple', cursive;
+
+    top: 20px;
+    left: 20px;
+
+    color: var(--titleText);
+    font-size: 140px;
+    justify-content: left;
+    position: absolute;
+    padding: 20px 0 0 60px;
+}
+
+/* media queries to adjust page elements bar when screen shrinks */
+@media (max-width: 1550px) {
+    .navBar {
+        padding-top: 180px;
+        padding-left: 20px;
+        justify-content: left;
+    }
+
+    .navBar ul li {
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 927px) {
+    .navBar ul li {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 736px) {
+    .navBar{
+        padding-top: 310px;
+        padding-left: 25px;
+    }
+}
